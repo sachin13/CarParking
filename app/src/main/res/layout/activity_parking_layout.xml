@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.parking.ParkingLayoutActivity">
+
+    <!-- NAME PARKING PLACE -->
+    <TextView
+        android:id="@+id/tv_title_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        android:textColor="?colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Parking Area - Town Square Cilandak" />
+
+    <!-- FLOOR & CLUSTER AND TOTAL SLOTS AVAILABLE -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="?colorPrimary"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_name">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_floor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:contentDescription="@string/carkir_contentDescription_imageView_floor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_layers_24"
+                app:tint="?colorOnPrimary" />
+
+            <TextView
+                android:id="@+id/tv_name_floor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="?colorOnPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/iv_icon_floor"
+                app:layout_constraintStart_toEndOf="@id/iv_icon_floor"
+                app:layout_constraintTop_toTopOf="@id/iv_icon_floor"
+                tools:text="Area 1A - 1C" />
+
+            <ImageView
+                android:id="@+id/iv_icon_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:contentDescription="@string/carkir_contentDescription_imageView_slot_availability"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_name_floor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_space_24"
+                app:tint="?colorOnPrimary" />
+
+            <TextView
+                android:id="@+id/tv_total_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="?colorOnPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_icon_space"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="10 Tempat tersisa" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ICON INFO FOR AVAILABLE SLOT -->
+    <ImageView
+        android:id="@+id/iv_icon_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/carkir_contentDescription_imageView_info_color"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_icon_green"
+        app:layout_constraintEnd_toStartOf="@id/tv_title_icon_green"
+        app:layout_constraintTop_toTopOf="@id/tv_title_icon_green"
+        app:srcCompat="@drawable/ic_circle_12"
+        app:tint="@color/green" />
+
+    <!-- TEXT INFO FOR AVAILABLE SLOT -->
+    <TextView
+        android:id="@+id/tv_title_icon_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/carkir_parking_layout_availability_slot"
+        android:textColor="?colorSecondary"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@id/cv_info" />
+
+    <!-- ICON INFO FOR NOT AVAILABLE SLOT -->
+    <ImageView
+        android:id="@+id/iv_icon_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/carkir_contentDescription_imageView_info_color"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_icon_red"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintTop_toTopOf="@id/tv_title_icon_red"
+        app:srcCompat="@drawable/ic_circle_12"
+        app:tint="@color/red" />
+
+    <!-- TEXT INFO NOT AVAILABLE FOR SLOT -->
+    <TextView
+        android:id="@+id/tv_title_icon_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/carkir_parking_layout_not_availability_slot"
+        android:textColor="?colorSecondary"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon_red"
+        app:layout_constraintTop_toBottomOf="@id/cv_info" />
+
+    <!-- LIST SLOT PARKING LAYOUT -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_icon_green"
+        tools:listitem="@layout/item_space_parking" />
+
+    <!-- FOR STATE ERROR -->
+    <ImageView
+        android:id="@+id/iv_empty_parking"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/carkir_contentDescription_imageView_empty"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_icon_green"
+        app:srcCompat="@drawable/ic_no_parking_layout"
+        tools:visibility="visible" />
+
+    <!-- FOR STATE ERROR -->
+    <TextView
+        android:id="@+id/tv_empty_parking_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/carkir_parking_layout_empty_slot_parking"
+        android:textAlignment="center"
+        android:textColor="?colorSecondary"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/iv_empty_parking"
+        app:layout_constraintStart_toStartOf="@id/iv_empty_parking"
+        app:layout_constraintTop_toBottomOf="@id/iv_empty_parking"
+        tools:visibility="visible" />
+
+    <!-- FOR STATE LOADING -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_green"
+        tools:visibility="visible" />
+
+    <!-- GUIDELINE FOR ICON GREEN AND RED -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.50"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

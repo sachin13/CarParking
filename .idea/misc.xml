@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/box_recent.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_detail_place.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/layout/activity_on_boarding.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/activity_parking_layout.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/card_item_favorite.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/card_item_histories.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/card_item_location.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/card_item_parking.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/card_item_recent.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/layout/item_space_binding.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/xml/activity_on_boarding_scene.xml" value="0.21041666666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
